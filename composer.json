@@ -1,0 +1,32 @@
+{
+    "name": "sunlab/wn-forumupload-plugin",
+    "description": "Adds file upload management for winter/wn-forum-plugin",
+    "homepage": "https://github.com/SunLabDev/wn-forumupload-plugin",
+    "keywords": ["winter cms", "winter", "plugin", "forum", "upload", "files"],
+    "type": "winter-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sunlab\\WnForumuploadPlugin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Romain 'Maz' BILLOIR",
+            "email": "contact@maz.digital",
+            "role": "Original Author"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/SunLabDev/wn-ssoclient-plugin/issues",
+        "source": "https://github.com/SunLabDev/wn-ssoclient-plugin"
+    },
+    "require": {
+        "php": ">=8.0",
+        "composer/installers": "~1.0",
+        "winter/wn-forum-plugin": "dev-main"
+    },
+    "extra": {
+        "installer-name": "forumupload"
+    }
+}

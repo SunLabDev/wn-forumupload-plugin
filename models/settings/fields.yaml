@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    file_extensions:
+        label: sunlab.forumupload::lang.settings.file_extensions_label
+        comment: sunlab.forumupload::lang.settings.file_extensions_comment
+        default: 'jpg, jpeg, png, gif, webp'
+        span: auto
+
+    max_filesize:
+        label: sunlab.forumupload::lang.settings.max_filesize_label
+        comment: sunlab.forumupload::lang.settings.max_filesize_comment
+        span: auto
+
+    files_per_post:
+        label: sunlab.forumupload::lang.settings.files_per_post_label
+        comment: sunlab.forumupload::lang.settings.files_per_post_comment
+        span: auto
