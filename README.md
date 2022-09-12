@@ -5,7 +5,7 @@ It extends the `Topic` component to add a `onFileUpload` handler which:
 - store the uploaded files
 - attach them to the `Post` model
 
-[File upload Preview](file-upload-preview.webm)
+![File upload Preview](file-upload-preview.gif)
 
 ### Under development
 This plugin is still under active development and should not be used in a production environment.
@@ -14,7 +14,7 @@ This plugin is still under active development and should not be used in a produc
 This plugin can be installed using composer:
 
 ```terminal
-composer require sunlab/wn-forumupload-plugin
+composer require sunlab/wn-levelup-plugin
 ```
 
 ### How to use it
