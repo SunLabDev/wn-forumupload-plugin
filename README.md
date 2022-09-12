@@ -14,7 +14,7 @@ This plugin is still under active development and should not be used in a produc
 This plugin can be installed using composer:
 
 ```terminal
-composer require sunlab/wn-levelup-plugin
+composer require sunlab/wn-forumupload-plugin
 ```
 
 ### How to use it
