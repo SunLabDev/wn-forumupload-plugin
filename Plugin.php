@@ -121,25 +121,17 @@ class Plugin extends PluginBase
 
             /**
              * Add event listeners to Topic component for Post create and update events
-             * This will attach
+             * This will attach any deferred bindings files' relationships
              */
-            $topicComponent->bindEvent('topic.create', function ($topic) {
-                if ($sessionKey = post('sessionKey')) {
-                    $topic->first_post->commitDeferred($sessionKey);
-                }
-            });
-
-            $topicComponent->bindEvent('topic.post', function ($post) {
+            $commitDeferred = function ($post) {
                 if ($sessionKey = post('sessionKey')) {
                     $post->commitDeferred($sessionKey);
                 }
-            });
+            };
 
-            $topicComponent->bindEvent('topic.post-update', function ($post) {
-                if ($sessionKey = post('sessionKey')) {
-                    $post->commitDeferred($sessionKey);
-                }
-            });
+            $topicComponent->bindEvent('topic.create', fn ($topic) => $commitDeferred($topic->first_post));
+            $topicComponent->bindEvent('topic.post', $commitDeferred);
+            $topicComponent->bindEvent('topic.postUpdate', $commitDeferred);
         });
     }
 
